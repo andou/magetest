@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Andou_Widget>
+      <version>0.1.0</version>
+    </Andou_Widget>
+  </modules>
+  <global>
+    <blocks>
+      <andou_widget>
+        <class>Andou_Widget_Block</class>
+      </andou_widget>
+    </blocks>
+    <helpers>
+      <andou_widget>
+        <class>Andou_Widget_Helper</class>
+      </andou_widget>
+    </helpers>
+  </global>
+</config>

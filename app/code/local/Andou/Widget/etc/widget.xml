@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<widgets>
+  <andou_widget_testconnection type="andou_widget/testconnection">
+    <name>Test your connection</name>
+    <description type="desc">Shows the "test your connection" form</description>
+    <parameters>
+      <title>
+        <label>Title</label>
+        <required>0</required>
+        <visible>1</visible>
+        <type>text</type>
+        <sort_order>1</sort_order>
+      </title>
+      <subtitle>
+        <label>Subtitle</label>
+        <required>0</required>
+        <visible>1</visible>
+        <type>text</type>
+        <sort_order>2</sort_order>
+      </subtitle>
+      <tel_placeholder>
+        <label>Telephone placeholder</label>
+        <required>0</required>
+        <visible>1</visible>
+        <type>text</type>
+        <sort_order>3</sort_order>
+      </tel_placeholder>
+      <mail_placeholder>
+        <label>Mail placeholder</label>
+        <required>0</required>
+        <visible>1</visible>
+        <type>text</type>
+        <sort_order>4</sort_order>
+      </mail_placeholder>
+      <start_test_text>
+        <label>Start test text</label>
+        <required>0</required>
+        <visible>1</visible>
+        <type>text</type>
+        <sort_order>5</sort_order>
+      </start_test_text>
+    </parameters>
+  </andou_widget_testconnection>
+  <andou_widget_smallonecol type="andou_widget/smallonecol">
+    <name>Content small one column</name>
+    <description type="desc">Content small one column</description>
+    <parameters>
+      <title_small>
+        <label>Title small</label>
+        <required>0</required>
+        <visible>1</visible>
+        <type>text</type>
+        <sort_order>1</sort_order>
+      </title_small>
+      <title>
+        <label>Title</label>
+        <required>0</required>
+        <visible>1</visible>
+        <type>text</type>
+        <sort_order>2</sort_order>
+      </title>
+      <image_big>
+        <label>Image big</label>
+        <required>1</required>
+        <visible>1</visible>
+        <type>widgetimagechooser/chooser</type>
+        <sort_order>3</sort_order>
+      </image_big>
+      <image_small>
+        <label>Image small</label>
+        <required>1</required>
+        <visible>1</visible>
+        <type>widgetimagechooser/chooser</type>
+        <sort_order>4</sort_order>
+      </image_small>
+    </parameters>
+  </andou_widget_smallonecol>
+  <andou_widget_bigonecol type="andou_widget/bigonecol">
+    <name>Content big one column</name>
+    <description type="desc">Content big one column</description>
+    <parameters>
+      <payoff>
+        <label>Payoff</label>
+        <required>0</required>
+        <visible>1</visible>
+        <type>text</type>
+        <sort_order>0</sort_order>
+      </payoff>
+      <title_small>
+        <label>Title small</label>
+        <required>0</required>
+        <visible>1</visible>
+        <type>text</type>
+        <sort_order>1</sort_order>
+      </title_small>
+      <title>
+        <label>Title</label>
+        <required>0</required>
+        <visible>1</visible>
+        <type>text</type>
+        <sort_order>2</sort_order>
+      </title>
+      <image_big>
+        <label>Image big</label>
+        <required>1</required>
+        <visible>1</visible>
+        <type>widgetimagechooser/chooser</type>
+        <sort_order>3</sort_order>
+      </image_big>
+      <image_small>
+        <label>Image small</label>
+        <required>1</required>
+        <visible>1</visible>
+        <type>widgetimagechooser/chooser</type>
+        <sort_order>4</sort_order>
+      </image_small>
+    </parameters>
+  </andou_widget_bigonecol>
+  <andou_widget_threeblock type="andou_widget/threeblock">
+    <name>Three block widget</name>
+    <description type="desc">Three block widget</description>
+    <parameters>
+      <block_id_big type="complex" translate="label">
+        <visible>1</visible>
+        <required>1</required>
+        <label>Block big</label>
+        <type>label</type>
+        <helper_block>
+          <type>adminhtml/cms_block_widget_chooser</type>
+          <data>
+            <button translate="open">
+              <open>Select Block...</open>
+            </button>
+          </data>
+        </helper_block>
+        <sort_order>10</sort_order>
+      </block_id_big>          
+      <block_id_small_1 type="complex" translate="label">
+        <visible>1</visible>
+        <required>1</required>
+        <label>Block small one</label>
+        <type>label</type>
+        <helper_block>
+          <type>adminhtml/cms_block_widget_chooser</type>
+          <data>
+            <button translate="open">
+              <open>Select Block...</open>
+            </button>
+          </data>
+        </helper_block>
+        <sort_order>20</sort_order>
+      </block_id_small_1>
+      <block_id_small_2 type="complex" translate="label">
+        <visible>1</visible>
+        <required>1</required>
+        <label>Block small two</label>
+        <type>label</type>
+        <helper_block>
+          <type>adminhtml/cms_block_widget_chooser</type>
+          <data>
+            <button translate="open">
+              <open>Select Block...</open>
+            </button>
+          </data>
+        </helper_block>
+        <sort_order>30</sort_order>
+      </block_id_small_2>
+    </parameters>
+  </andou_widget_threeblock>
+</widgets>
