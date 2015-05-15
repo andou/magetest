@@ -1,0 +1,77 @@
+<?php
+$title = $this->getData("title");
+$title_small = $this->getData("title_small");
+$image_big = $this->getImageUrl('image_big');
+$image_small = $this->getImageUrl('image_small');
+list($usec, $sec) = explode(' ', microtime());
+$sed = (float) $sec + ((float) $usec * 100000);
+srand($sed);
+$rand = rand();
+$class = "accueil" . $rand;
+?>
+<style>
+
+
+  @font-face {
+    font-family: 'bariol_regularregular';
+    src: url('http://magedemo.cloud.reply.eu//media/bariol_bold-webfont.eot');
+    src: url('http://magedemo.cloud.reply.eu//media/bariol_bold-webfont.eot?#iefix') format('embedded-opentype'),
+      url('http://magedemo.cloud.reply.eu//media/bariol_bold-webfont.woff') format('woff'),
+      url('http://magedemo.cloud.reply.eu//media/bariol_bold-webfont.ttf') format('truetype'),
+      url('http://magedemo.cloud.reply.eu//media/bariol_bold-webfont.svg#bariol_regularregular') format('svg');
+  }
+  .<?php echo $class ?> {
+    float: left;
+    width: 298px;
+    height: 222px;
+    background: url(<?php echo $image_big ?>);
+    position: relative;
+    cursor: pointer;
+    font-family: arial;
+    font-size: 12px;
+    color: #68696a;
+  }
+  .<?php echo $class ?>Barre {
+    background: url(http://www.tooway.it/wp-content/themes/tooway_it/images/no2/bande2.png);
+    width: 289px;
+    height: 52px;
+    position: absolute;
+    bottom: 6px;
+    left: 3px;
+  }
+  .<?php echo $class ?>Barre img {
+    position: absolute;
+    left: 7px;
+    top: 4px;
+  }
+  .<?php echo $class ?>Barre > h2 {
+    margin: 0;
+    /* padding: 10px 0 0 74px; */
+    padding: 10px 0 0 55px;
+    font-family: 'bariol_regularregular';
+    font-size: 13px;
+    color: #252523;
+    line-height: 21px;
+    /*font-weight: bold;*/
+    letter-spacing: -0.03em;
+  }
+  .<?php echo $class ?>Barre > h3 {
+    margin: 0;
+    padding: 0px 0 0 55px;
+    font-size: 15px;
+    font-family: arial;
+    font-weight: normal;
+    color: #252523;
+    letter-spacing: -0.04em;
+  }
+</style>
+
+
+
+<div class="<?php echo $class ?>" onclick="window.location = 'http://www.tooway.it/informati-sulle-formule/tooway-easy/';">
+  <div class="<?php echo $class ?>Barre">
+    <img src="<?php echo $image_small ?>">
+    <h2><?php echo $title_small ?></h2>
+    <h3><?php echo $title ?></h3>			
+  </div>
+</div>

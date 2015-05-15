@@ -1,0 +1,111 @@
+<?php
+$title = $this->getData("title");
+$subtitle = $this->getData("subtitle");
+$tel_placeholder = $this->getData("tel_placeholder");
+$mail_placeholder = $this->getData("mail_placeholder");
+$start_test = $this->getData("start_test_text");
+//controllo se e stato richiesto l'effetto hover
+?>
+<style>
+  .accueil3 {
+    float: left;
+    width: 491px;
+    height: 108px;
+    background: url(http://www.tooway.it/wp-content/themes/tooway_it/images/no2/fond-test.jpg);
+    margin-right: 9px;
+    font-family: arial;
+    font-size: 12px;
+    color: #68696a;
+      margin-left: 90px;
+  }
+  .accueil3 h2 {
+    background: url(http://www.tooway.it/wp-content/themes/tooway_it/images/no2/montre.png) no-repeat 0 0;
+    margin: 9px 0 0 18px;
+    padding: 0 0 0 25px;
+    font-family: 'bariol_regularregular';
+    font-weight: bold;
+    font-size: 25px;
+    color: #666666;
+    border-bottom:none;
+  }
+  .accueil3 h3 {
+    font-family: arial;
+    font-size: 14px;
+    color: #252523;
+    padding: 0 0 0 50px;
+  }
+  .accueil3 form {
+    padding: 12px 0 0 20px;
+  }
+
+  .accueil3 input[type=text] {
+    width: 145px;
+    height: 29px;
+    background: url(http://www.tooway.it/wp-content/themes/tooway_it/images/no2/fond-input-test.jpg) no-repeat;
+    border: none;
+    padding: 0 9px;
+    letter-spacing: -0.05em;
+    color: #333333;
+    float: left;
+    margin-right: 5px;
+  }
+  .accueil3 input[type=submit] {
+    background: url(http://www.tooway.it/wp-content/themes/tooway_it/images/no2/cta-test.png) no-repeat;
+    border: none;
+    width: 116px;
+    height: 29px;
+    text-align: center;
+    color: #fff;
+    padding: 0 5px 2px 0;
+    float: left;
+    cursor: pointer;
+    font-family: 'bariol_regularregular';
+    font-size: 14px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+</style>
+
+
+<div class="accueil3">
+  <h2><?php echo $title ?></h2>
+  <h3><?php echo $subtitle ?></h3>
+  <form method="POST" action="#" onsubmit="return(verif_test_form(this));">
+    <input type="text" name="tel" placeholder="<?php echo $tel_placeholder ?>">
+    <input type="text" name="email" placeholder="<?php echo $mail_placeholder ?>">
+    <input type="submit" value="<?php echo $start_test ?>">
+  </form>
+</div>
+
+
+
+<script type="text/javascript">
+    var reg_tel = new RegExp('/^[0-9]{8,13}$/');
+    var reg_email = new RegExp('/^[A-Za-z0-9\.\-_]+[@][A-Za-z0-9\-\.]+[\.][A-Za-z]+?$/');
+
+    function verif_test_form(monform)
+    {
+      if (!reg_tel.test(monform.tel.value))
+      {
+        alert("Devi inserire il tuo numero di telefono");
+        monform.tel.focus();
+        return false;
+      }
+      if (monform.email.value == "")
+      {
+        alert('Devi inserire il tuo e-mail');
+        monform.email.focus();
+        return(false);
+      }
+      if (monform.email && !reg_email.test(monform.email.value))
+      {
+        alert("Devi inserire il tuo e-mail");
+        monform.email.focus();
+        return false;
+      }
+      return(true);
+    }
+</script>

@@ -1,0 +1,81 @@
+<?php
+$payoff = $this->getData("payoff");
+$title = $this->getData("title");
+$title_small = $this->getData("title_small");
+$image_big = $this->getImageUrl('image_big');
+$image_small = $this->getImageUrl('image_small');
+
+$class = "accueil1";
+?>
+<style>
+  .accueil1 {
+    float: left;
+    width: 673px;
+    height: 454px;
+    background: url(<?php echo $image_big ?>);
+    margin-right: 9px;
+    position: relative;
+    color: #000;
+    cursor: pointer;
+  }
+  .accueil1Texte {
+    position: absolute;
+    top: 25px;
+    left: 17px;
+    background: url(http://www.tooway.it/wp-content/themes/tooway_it/images/no2/parabole.png) no-repeat 0 68px;
+    width: 300px;
+    height: 250px;
+  }
+  .accueil1Texte h2 {
+    font-family: 'bariol_regularregular';
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+    line-height: 25px;
+  }
+  .accueil1Texte li:nth-child(1) {
+    background: url(http://www.tooway.it/wp-content/themes/tooway_it/images/no2/cloud.png) no-repeat 0px 3px;
+  }
+  .accueil1Texte li {
+    padding: 0 0 7px 30px;
+  }
+  .accueil1Barre {
+    background: url(http://www.tooway.it/wp-content/themes/tooway_it/images/no2/bande.png);
+    width: 662px;
+    height: 85px;
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+  }
+  .accueil1Barre img {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+  }
+  .accueil1Barre > h2 {
+    margin: 0;
+    padding: 5px 0 0 96px;
+    font-family: 'bariol_regularregular';
+    font-size: 35px;
+    font-weight: bold;
+    color: #333333;
+  }
+  .accueil1Barre > h3 {
+    margin: 0;
+    padding: 0 0 0 96px;
+    font-size: 18px;
+    font-family: arial;
+    font-weight: normal;
+  }
+</style>
+
+<div class="<?php echo $class ?>" onclick="window.location = 'http://www.tooway.it/informati-sulle-formule/tooway-easy/';">
+  <div class="accueil1Texte">
+    <h2><?php echo $payoff ?></h2>
+  </div>
+  <div class="<?php echo $class ?>Barre">
+    <img src="<?php echo $image_small ?>">
+    <h2><?php echo $title ?></h2>
+    <h3><?php echo $title_small ?></h3>			
+  </div>
+</div>

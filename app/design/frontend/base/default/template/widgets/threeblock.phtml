@@ -1,0 +1,19 @@
+<?php $this->init(); ?>
+<style>
+  #accueil {
+    width: 980px;
+    margin: 34px auto 28px auto;
+    position: relative;
+  }
+#accueil .pippo:first-child{
+  margin-top:10px;
+}
+</style>
+
+<div id="accueil">
+  <?php $this->echoBigBlock(); ?>
+  <?php $this->echoSmallBlockOne(); ?>
+<div class='pippo'>
+  <?php $this->echoSmallBlockTwo(); ?>
+</div>
+</div>
