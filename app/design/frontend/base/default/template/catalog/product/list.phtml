@@ -49,7 +49,7 @@ $_helper = $this->helper('catalog/output');
       <?php $_productNameStripped = $this->stripTags($_product->getName(), null, true); ?>
       <div class="row row-box-page red-border">
         <div class="col-xs-12 box-page nopadding">
-          <img class="bg-page-box" src="assets/page-box-1.png">
+          <img class="bg-page-box" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(135); ?>">
           <div class="row content-box-page">
             <div class="col-xs-6 nopadding">
               <div class="content-center">
