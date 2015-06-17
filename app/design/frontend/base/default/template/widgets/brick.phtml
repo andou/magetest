@@ -1,17 +1,19 @@
 <?php
 $title = $this->getData("title");
 $subtitle = $this->getData("subtitle");
-$find_out_text = $this->getData("find_out");
+$find_out_text = $this->getData("find_out_text");
 $find_out_link = $this->getData("find_out_link");
+$_find_out_color = $this->getData("find_out_color");
 $image = $this->getImageUrl('image');
 $_template = $this->getData('template');
 $template = $_template ? $_template : '3';
+$testo_nero = $this->getData('black_text');
 ?>
 <div class="col-xs-<?php echo $template; ?> box-header nopadding">
   <img class="bg-box-header" src="<?php echo $image; ?>">
   <div class="content-box-header">
-    <h4 class="content-box-title"><?php echo $title; ?></h4>
-    <p class="content-box-subtitle"><?php echo $subtitle ?></p>
+    <h4 class="content-box-title<?php if ($testo_nero): ?> black-text<?php endif; ?>"><?php echo $title; ?></h4>
+    <p class="content-box-subtitle<?php if ($testo_nero): ?> black-text<?php endif; ?>"><?php echo $subtitle ?></p>
     <!--    <div class="col-xs-4">
           <img class="icon-box-header" src="assets/icon-22mb.png">
         </div>
@@ -23,7 +25,7 @@ $template = $_template ? $_template : '3';
         </div>-->
     <div class="clearfix"></div>
     <?php if ($find_out_text): ?>
-      <a href="<?php echo $find_out_link ?>" class="puls-box-header"><?php echo $find_out_text ?></a>
+      <a href="<?php echo $find_out_link ?>" class="puls-box-header<?php if ($_find_out_color): ?> puls-bg<?php echo $_find_out_color; ?><?php endif; ?>"><?php echo $find_out_text ?></a>
     <?php endif; ?>
   </div>
 </div>

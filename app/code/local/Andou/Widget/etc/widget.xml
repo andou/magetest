@@ -243,6 +243,14 @@
         <type>text</type>
         <sort_order>20</sort_order>
       </subtitle>
+      <black_text>
+        <label>Use black text</label>
+        <required>0</required>
+        <visible>1</visible>
+        <type>select</type>
+        <source_model>adminhtml/system_config_source_yesno</source_model>
+        <sort_order>21</sort_order>
+      </black_text>
       <find_out_text>
         <label>Link text</label>
         <required>0</required>
@@ -257,6 +265,13 @@
         <type>text</type>
         <sort_order>40</sort_order>
       </find_out_link>
+      <find_out_color>
+        <label>Link color</label>
+        <required>0</required>
+        <visible>1</visible>
+        <type>text</type>
+        <sort_order>41</sort_order>
+      </find_out_color>
       <image>
         <label>Image</label>
         <required>1</required>
