@@ -226,7 +226,8 @@
         <label>Template</label>
         <required>1</required>
         <visible>1</visible>
-        <type>text</type>
+        <type>select</type>
+        <source_model>andou_widget/widget_template</source_model>
         <sort_order>0</sort_order>
       </template>
       <title>

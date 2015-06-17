@@ -11,6 +11,11 @@
         <class>Andou_Widget_Block</class>
       </andou_widget>
     </blocks>
+    <models>
+      <andou_widget>
+        <class>Andou_Widget_Model</class>
+      </andou_widget>
+    </models>
     <helpers>
       <andou_widget>
         <class>Andou_Widget_Helper</class>
