@@ -39,6 +39,14 @@ $_helper = $this->helper('catalog/output');
   <p class="note-msg"><?php echo $this->__('There are no products matching the selection.') ?></p>
 <?php else: ?>
   <div class="container-fluid">
+    <header class="nopadding">
+
+      <img src="<?php echo $this->getSkinUrl('images/page_canvas_header.png'); ?>">
+
+    </header>
+
+
+
     <?php foreach ($_productCollection as $_product): ?>
       <?php $_productNameStripped = $this->stripTags($_product->getName(), null, true); ?>
       <?php $_giga_per_month = $this->stripTags($_product->getGigaPerMonth(), null, true); ?>
@@ -119,7 +127,9 @@ $_helper = $this->helper('catalog/output');
 
 
 
-
+    <footer class="nopadding">
+      <img src="<?php echo $this->getSkinUrl('images/page_canvas_footer.png'); ?>">
+    </footer>
 
 
   </div>
