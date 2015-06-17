@@ -54,7 +54,7 @@ $_helper = $this->helper('catalog/output');
       <?php $product = Mage::getModel('catalog/product')->load($_product->getId()); ?>
       <div class="row row-box-page red-border">
         <div class="col-xs-12 box-page nopadding">
-          <img class="bg-page-box" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(135); ?>">
+          <img class="bg-page-box" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(150); ?>">
           <div class="row content-box-page">
             <div class="col-xs-6 nopadding">
               <div class="content-center">
@@ -63,7 +63,7 @@ $_helper = $this->helper('catalog/output');
                 <div class="clearfix"></div>
                 <div class="row">
                   <div class="col-xs-6 nopadding">
-                    <img class="product-box-page" src="<?php echo $this->helper('catalog/image')->init($product, 'box_catalog_image')->resize(135); ?>">
+                    <img class="product-box-page" src="<?php echo $this->helper('catalog/image')->init($product, 'box_catalog_image'); ?>">
                   </div>
                   <div class="col-xs-6 nopadding">
                     <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_productNameStripped ?>" class="puls-box-page bg-red">
