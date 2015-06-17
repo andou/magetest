@@ -38,13 +38,7 @@ $_helper = $this->helper('catalog/output');
 <?php if (!$_productCollection->count()): ?>
   <p class="note-msg"><?php echo $this->__('There are no products matching the selection.') ?></p>
 <?php else: ?>
-  <div class="category-products">
-
-
-
-
-
-
+  <div class="container-fluid">
     <?php foreach ($_productCollection as $_product): ?>
       <?php $_productNameStripped = $this->stripTags($_product->getName(), null, true); ?>
       <?php $_giga_per_month = $this->stripTags($_product->getGigaPerMonth(), null, true); ?>
