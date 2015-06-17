@@ -63,7 +63,7 @@ $_helper = $this->helper('catalog/output');
                 <div class="clearfix"></div>
                 <div class="row">
                   <div class="col-xs-6 nopadding">
-                    <img class="product-box-page" src="<?php echo $this->helper('catalog/image')->init($product, 'box_catalog_image'); ?>">
+                    <img class="product-box-page" src="<?php echo $this->helper('catalog/image')->init($product, 'box_catalog_image')->resize(1400, 285); ?>">
                   </div>
                   <div class="col-xs-6 nopadding">
                     <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_productNameStripped ?>" class="puls-box-page bg-red">
