@@ -8,21 +8,31 @@ $image = $this->getImageUrl('image');
 $_template = $this->getData('template');
 $template = $_template ? $_template : '3';
 $testo_nero = $this->getData('black_text');
+
+$_icon1 = $this->getData('icon1');
+$_icon2 = $this->getData('icon2');
+$_icon3 = $this->getData('icon3');
 ?>
 <div class="col-xs-<?php echo $template; ?> box-header nopadding">
   <img class="bg-box-header" src="<?php echo $image; ?>">
   <div class="content-box-header">
     <h4 class="content-box-title<?php if ($testo_nero): ?> black-text<?php endif; ?>"><?php echo $title; ?></h4>
     <p class="content-box-subtitle<?php if ($testo_nero): ?> black-text<?php endif; ?>"><?php echo $subtitle ?></p>
-    <!--    <div class="col-xs-4">
-          <img class="icon-box-header" src="assets/icon-22mb.png">
-        </div>
-        <div class="col-xs-4">
-          <img class="icon-box-header" src="assets/icon-parabola.png">
-        </div>
-        <div class="col-xs-4">
-          <img class="icon-box-header" src="assets/icon-modem.png">
-        </div>-->
+    <?php if ($_icon1): ?>
+      <div class="col-xs-4">
+        <img class="icon-box-header" src="<?php echo $this->getImageUrl('icon1'); ?>">
+      </div>
+    <?php endif; ?>
+    <?php if ($_icon2): ?>
+      <div class="col-xs-4">
+        <img class="icon-box-header" src="<?php echo $this->getImageUrl('icon2'); ?>">
+      </div>
+    <?php endif; ?>
+    <?php if ($_icon3): ?>
+      <div class="col-xs-4">
+        <img class="icon-box-header" src="<?php echo $this->getImageUrl('icon3'); ?>">
+      </div>
+    <?php endif; ?>
     <div class="clearfix"></div>
     <?php if ($find_out_text): ?>
       <a href="<?php echo $find_out_link ?>" class="puls-box-header<?php if ($_find_out_color): ?> puls-bg<?php echo $_find_out_color; ?><?php endif; ?>"><?php echo $find_out_text ?></a>

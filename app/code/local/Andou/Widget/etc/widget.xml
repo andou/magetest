@@ -279,6 +279,27 @@
         <type>widgetimagechooser/chooser</type>
         <sort_order>50</sort_order>
       </image>
+      <icon1>
+        <label>Icon1</label>
+        <required>1</required>
+        <visible>1</visible>
+        <type>widgetimagechooser/chooser</type>
+        <sort_order>60</sort_order>
+      </icon1>
+      <icon2>
+        <label>Icon2</label>
+        <required>1</required>
+        <visible>1</visible>
+        <type>widgetimagechooser/chooser</type>
+        <sort_order>70</sort_order>
+      </icon2>
+      <icon3>
+        <label>Icon3</label>
+        <required>1</required>
+        <visible>1</visible>
+        <type>widgetimagechooser/chooser</type>
+        <sort_order>80</sort_order>
+      </icon3>
     </parameters>
   </andou_widget_brick>
 </widgets>
