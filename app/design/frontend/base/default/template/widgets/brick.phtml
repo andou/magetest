@@ -1,0 +1,29 @@
+<?php
+$title = $this->getData("title");
+$subtitle = $this->getData("subtitle");
+$find_out_text = $this->getData("find_out");
+$find_out_link = $this->getData("find_out_link");
+$image = $this->getImageUrl('image');
+$_template = $this->getData('template');
+$template = $_template ? $_template : '3';
+?>
+<div class="col-xs-<?php echo $template; ?> box-header nopadding">
+  <img class="bg-box-header" src="<?php echo $image; ?>">
+  <div class="content-box-header">
+    <h4 class="content-box-title"><?php echo $title; ?></h4>
+    <p class="content-box-subtitle"><?php echo $subtitle ?></p>
+    <!--    <div class="col-xs-4">
+          <img class="icon-box-header" src="assets/icon-22mb.png">
+        </div>
+        <div class="col-xs-4">
+          <img class="icon-box-header" src="assets/icon-parabola.png">
+        </div>
+        <div class="col-xs-4">
+          <img class="icon-box-header" src="assets/icon-modem.png">
+        </div>-->
+    <div class="clearfix"></div>
+    <?php if ($find_out_text): ?>
+      <a href="<?php echo $find_out_link ?>" class="puls-box-header"><?php echo $find_out_text ?></a>
+    <?php endif; ?>
+  </div>
+</div>

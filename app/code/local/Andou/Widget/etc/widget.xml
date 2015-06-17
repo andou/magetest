@@ -167,4 +167,103 @@
       </block_id_small_2>
     </parameters>
   </andou_widget_threeblock>
+  <andou_widget_row type="andou_widget/row">
+    <name>Row widget</name>
+    <description type="desc">Row widget</description>
+    <parameters>
+      <brick_a_id type="complex" translate="label">
+        <visible>1</visible>
+        <required>1</required>
+        <label>Brick A</label>
+        <type>label</type>
+        <helper_block>
+          <type>adminhtml/cms_block_widget_chooser</type>
+          <data>
+            <button translate="open">
+              <open>Select Brick...</open>
+            </button>
+          </data>
+        </helper_block>
+        <sort_order>10</sort_order>
+      </brick_a_id>          
+      <brick_b_id type="complex" translate="label">
+        <visible>1</visible>
+        <required>1</required>
+        <label>Brick B</label>
+        <type>label</type>
+        <helper_block>
+          <type>adminhtml/cms_block_widget_chooser</type>
+          <data>
+            <button translate="open">
+              <open>Select Brick...</open>
+            </button>
+          </data>
+        </helper_block>
+        <sort_order>20</sort_order>
+      </brick_b_id>
+      <brick_b_id type="complex" translate="label">
+        <visible>1</visible>
+        <required>1</required>
+        <label>Brick C</label>
+        <type>label</type>
+        <helper_block>
+          <type>adminhtml/cms_block_widget_chooser</type>
+          <data>
+            <button translate="open">
+              <open>Select Brick...</open>
+            </button>
+          </data>
+        </helper_block>
+        <sort_order>30</sort_order>
+      </brick_b_id>
+    </parameters>
+  </andou_widget_row>
+  <andou_widget_brick type="andou_widget/brick">
+    <name>Brick</name>
+    <description type="desc">Brick</description>
+    <parameters>
+      <template>
+        <label>Template</label>
+        <required>1</required>
+        <visible>1</visible>
+        <type>text</type>
+        <sort_order>0</sort_order>
+      </template>
+      <title>
+        <label>Title</label>
+        <required>0</required>
+        <visible>1</visible>
+        <type>text</type>
+        <sort_order>10</sort_order>
+      </title>
+      <subtitle>
+        <label>Subtitle</label>
+        <required>0</required>
+        <visible>1</visible>
+        <type>text</type>
+        <sort_order>20</sort_order>
+      </subtitle>
+      <find_out_text>
+        <label>Link text</label>
+        <required>0</required>
+        <visible>1</visible>
+        <type>text</type>
+        <sort_order>30</sort_order>
+      </find_out_text>
+      <find_out_link>
+        <label>Link url</label>
+        <required>0</required>
+        <visible>1</visible>
+        <type>text</type>
+        <sort_order>40</sort_order>
+      </find_out_link>
+      <image>
+        <label>Image</label>
+        <required>1</required>
+        <visible>1</visible>
+        <type>widgetimagechooser/chooser</type>
+        <sort_order>50</sort_order>
+      </image>
+    </parameters>
+  </andou_widget_brick>
 </widgets>
